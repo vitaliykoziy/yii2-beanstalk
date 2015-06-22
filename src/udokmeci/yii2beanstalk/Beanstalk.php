@@ -18,7 +18,6 @@ class Beanstalk extends \yii\base\Component {
 			
 
 			$this->_beanstalk = new Pheanstalk($this->host, $this->port, $this->connectTimeout);
-			$connected = true;
 		} catch (\Pheanstalk\Exception\ConnectionException $e) {
 			Yii::error($e);
 		}
